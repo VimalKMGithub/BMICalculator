@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/nav_shape"
+        app:itemTextColor="@drawable/item_text" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Body Mass Index Calculator"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/weightLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Weight (in Kg)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/weightLabel_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/heightLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Height (in cm)"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/heightLabel_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2CD3BE"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/bmi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculate_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="The BMI is "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="BMI"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Status"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/ReCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#EAA268"
+        android:text="Recalculate"
+        android:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnView"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bnv_shape"
+        app:itemTextColor="@drawable/item_text"
+        app:menu="@menu/bn_view" />
+</RelativeLayout>
